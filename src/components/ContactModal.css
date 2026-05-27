@@ -1,0 +1,213 @@
+.contact-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 5, 5, 0.95);
+  backdrop-filter: blur(8px);
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.contact-modal-inner {
+  background: var(--bg-secondary);
+  width: 80%;
+  max-width: 1000px;
+  border-radius: 16px;
+  padding: 3rem 2.5rem;
+  position: relative;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  transform: translateY(20px);
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUp {
+  to { transform: translateY(0); }
+}
+
+.contact-close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-secondary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.contact-close-btn:hover {
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  border-color: var(--border-color);
+}
+
+.contact-modal-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-modal-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.contact-modal-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Tabs */
+.contact-tabs {
+  display: flex;
+  background: var(--bg-tertiary);
+  padding: 0.5rem;
+  border-radius: 12px;
+  margin-bottom: 2.5rem;
+}
+
+.contact-tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-tab:hover {
+  color: #fff;
+}
+
+.contact-tab.active {
+  background: var(--bg-color);
+  color: var(--accent-neon);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--accent-neon);
+  box-shadow: 0 0 0 2px rgba(204, 255, 0, 0.1);
+}
+
+.form-input.disabled {
+  background: rgba(255,255,255,0.02);
+  color: var(--text-secondary);
+  cursor: not-allowed;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-submit-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.send-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 50px;
+}
+
+.whatsapp-btn {
+  background: #25D366;
+  color: #fff;
+  border-color: #25D366;
+}
+
+.whatsapp-btn:hover {
+  background: transparent;
+  color: #25D366;
+  border-color: #25D366;
+}
+
+/* Utilities */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .contact-modal-inner {
+    width: 95%;
+    padding: 2.5rem 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-modal-inner {
+    width: 100%;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+  }
+  .contact-modal-title {
+    font-size: 2rem;
+  }
+  .contact-tabs {
+    flex-direction: column;
+  }
+}

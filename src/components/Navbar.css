@@ -1,0 +1,284 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.5rem 0;
+  transition: var(--transition);
+  background: transparent;
+}
+
+body.projects-open .navbar,
+body.achievements-open .navbar {
+  z-index: 1;
+}
+
+.navbar.scrolled {
+  background: transparent;
+  padding: 1rem 0;
+}
+
+@media (min-width: 769px) {
+  body.theme-green .logo-dot.green {
+    background-color: var(--bg-color);
+  }
+
+  body.theme-green .music-toggle-btn svg {
+    fill: var(--bg-color) !important;
+    color: var(--bg-color) !important;
+    stroke: var(--bg-color) !important;
+  }
+
+  body.theme-green .btn-outline {
+    background: var(--bg-color);
+    color: var(--accent-neon);
+    border-color: var(--bg-color);
+  }
+
+  body.theme-green .btn-outline:hover {
+    background: transparent;
+    color: var(--bg-color);
+    border-color: var(--bg-color);
+  }
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  padding: 0 4rem;
+}
+
+.get-in-touch-nav {
+  padding: 0.5rem 1.5rem;
+  font-size: 0.8rem;
+  border-radius: 50px;
+}
+
+.logo {
+  display: grid;
+  grid-template-columns: 12px 12px;
+  grid-template-rows: 12px 12px;
+  gap: 4px;
+  animation: rotateLogo 4s infinite linear;
+  transform-origin: center;
+}
+
+.logo-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.logo-dot.green {
+  background: var(--accent-neon);
+}
+.logo-dot.white {
+  background: var(--text-primary);
+}
+
+@keyframes rotateLogo {
+  0%, 20% { transform: rotate(0deg); }
+  25%, 45% { transform: rotate(90deg); }
+  50%, 70% { transform: rotate(180deg); }
+  75%, 95% { transform: rotate(270deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: var(--transition);
+}
+
+.navbar.scrolled .nav-links {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--text-secondary);
+}
+
+.nav-links a:hover {
+  color: var(--accent-neon);
+}
+
+.mobile-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: right 0.4s ease;
+  z-index: 999;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+.mobile-nav-links a {
+  font-size: 1.5rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.music-toggle-btn {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 8px;
+  border-radius: 50%;
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(204, 255, 0, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(204, 255, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(204, 255, 0, 0); }
+}
+
+.music-toggle-btn.needs-attention {
+  animation: pulseGlow 2s infinite;
+  background: rgba(204, 255, 0, 0.1);
+}
+
+.music-toggle-btn:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.music-player-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.song-tooltip {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 15px;
+  margin-right: 0;
+  background: var(--bg-secondary);
+  border: 1px solid var(--accent-neon);
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  /* Delay the hide transition by 1.5s so user can click */
+  transition: opacity 0.3s ease 1.5s, transform 0.3s ease 1.5s, visibility 0s linear 1.8s;
+}
+
+/* Invisible bridge so mouse doesn't lose hover over the gap */
+.song-tooltip::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 0;
+  right: 0;
+  height: 15px;
+  background: transparent;
+}
+
+/* Dialogue box tail/arrow */
+.song-tooltip::after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  right: 12px; /* Points roughly at the center of the button */
+  transform: none;
+  border-width: 0 6px 6px 6px;
+  border-style: solid;
+  border-color: transparent transparent var(--accent-neon) transparent;
+}
+
+.song-tooltip a {
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.song-tooltip a:hover {
+  color: var(--accent-neon);
+}
+
+@media (hover: hover) {
+  .music-player-wrapper:hover .song-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    /* No delay when showing */
+    transition: opacity 0.3s ease 0s, transform 0.3s ease 0s, visibility 0s linear 0s;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: none;
+  }
+  
+  .navbar.scrolled {
+    background: transparent;
+  }
+
+  .logo-dot { width: 10px; height: 10px; }
+  
+  .nav-container {
+    padding: 0 1rem;
+  }
+  
+  .nav-right {
+    gap: 1rem !important;
+  }
+  
+  .get-in-touch-nav {
+    padding: 0.4rem 1rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 0.5rem;
+  }
+}

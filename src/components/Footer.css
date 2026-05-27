@@ -1,0 +1,105 @@
+.footer-section {
+  padding: 4rem 0 2rem;
+  border-top: 1px solid var(--border-color);
+  background: transparent;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer-title {
+  font-size: 3rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.footer-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  font-family: var(--font-display);
+}
+
+.footer-copy {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
+.mobile-copy {
+  display: none;
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: right;
+}
+
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+  transition: var(--transition);
+}
+
+.footer-socials a:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-neon);
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  .footer-socials {
+    text-align: left;
+  }
+  .desktop-copy {
+    display: none;
+  }
+  .mobile-copy {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+/* Invert text color when resting on neon green background */
+body.theme-green .footer-title {
+  color: var(--bg-color);
+}
+body.theme-green .footer-subtitle {
+  color: var(--bg-color);
+  opacity: 0.8;
+}
+body.theme-green .footer-copy {
+  color: var(--bg-color);
+}
+body.theme-green .footer-socials a {
+  color: var(--bg-color);
+  font-weight: 600;
+}
+body.theme-green .footer-socials a:hover {
+  color: #000000;
+  text-decoration-color: var(--bg-color);
+}
+body.theme-green .footer-section {
+  border-top-color: rgba(0,0,0,0.1);
+}
