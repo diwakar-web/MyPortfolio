@@ -61,7 +61,7 @@ const Hero = () => {
       <div className="hero-background">
         <div className="hero-image-container">
           <img 
-            src="/abc.jpeg"
+            src="/abc.webp"
             alt="Diwakar Nagar" 
             className="hero-image"
           />

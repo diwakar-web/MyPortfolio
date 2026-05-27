@@ -6,25 +6,25 @@ const achievements = [
   {
     id: 1,
     title: 'NPTEL Elite HCI Course - Top 2%',
-    image: 'achievement4.png',
+    image: 'achievement4.webp',
     para: 'Secured 99% (Top 2% of 23,139 candidates) in the 12-week NPTEL Elite HCI course by IIIT Delhi. Covered UI/UX Design, Smart UI, HCI with IoT, and AI/LLMs. This taught me how to mitigate cognitive overload and design systems that feel simple, intuitive, and user-centric.',
   },
   {
     id: 2,
     title: 'AI Impact Summit India 2025',
-    image: 'achievement1.jpeg',
+    image: 'achievement1.webp',
     para: 'Attended the AI Impact Summit India, 2025 in New Delhi, gaining insights into emerging trends in artificial intelligence, real-world applications, and industry innovations through expert talks, workshops, and networking with professionals.',
   },
   {
     id: 3,
     title: 'Inter-University Chess Competition',
-    image: 'achievement2.jpeg',
+    image: 'achievement2.webp',
     para: 'Secured a Gold Medal and Runner-Up position in an inter-university chess competition, demonstrating strategic thinking, problem-solving skills, and competitive excellence against top university players.',
   },
   {
     id: 4,
     title: 'Independent Music Producer',
-    image: 'achievement3.png',
+    image: 'achievement3.webp',
     para: 'Achieved 10K+ streams on Spotify for an original track, marking a significant milestone in music production. Collaborated on 25+ projects, including both Indian and international artists, showcasing creativity, consistency, and cross-cultural collaboration.',
   },
   
