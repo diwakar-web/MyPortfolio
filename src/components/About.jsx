@@ -74,7 +74,11 @@ Hi, I’m Diwakar Nagar, a creative developer focused on building modern, smooth
             </div>
             <div className="stat-item">
               <h3 className="stat-number"><AnimatedNumber end={20} /><span className="text-neon">+</span></h3>
-              <p className="stat-label"> Repositories</p>
+              <p className="stat-label">Repositories</p>
+            </div>
+            <div className="stat-item">
+              <h3 className="stat-number"><AnimatedNumber end={450} /><span className="text-neon">+</span></h3>
+              <p className="stat-label">LinkedIn Connections</p>
             </div>
           </div>
         </div>

@@ -66,12 +66,61 @@
   font-weight: 500;
   font-size: 0.9rem;
   background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
 }
 
-.service-box:hover {
-  background: rgba(204, 255, 0, 0.05);
-  color: var(--text-primary);
+.service-name {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.service-icon {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  color: #000;
+}
+
+.default-service-box:hover {
+  background: var(--accent-neon);
+  color: #000;
   border-color: var(--accent-neon);
+}
+
+.default-service-box:hover .service-name {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.default-service-box:hover .service-icon {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.social-box {
+  cursor: pointer;
+  background: #000;
+}
+
+.social-icon-only {
+  font-size: 2rem;
+  color: var(--accent-neon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-box:hover {
+  border-color: var(--accent-neon);
+  background: rgba(204, 255, 0, 0.05);
 }
 
 .cube-icon-small {

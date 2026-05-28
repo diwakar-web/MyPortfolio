@@ -61,12 +61,14 @@ body.theme-green .black-canvas-wrapper .about-btn:hover {
 
 .stats-grid {
   display: flex;
-  gap: 3rem;
+  justify-content: space-between;
+  gap: 1.5rem;
 }
 
 .stat-item {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .stat-number {
@@ -128,9 +130,9 @@ body.theme-green .black-canvas-wrapper .about-btn:hover {
   }
   
   .stats-grid {
-    flex-direction: row;
-    gap: 1rem;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1rem;
     width: 100%;
   }
   
