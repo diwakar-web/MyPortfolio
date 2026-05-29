@@ -2,7 +2,7 @@
 
 This is a personal portfolio website showcasing my projects, achievements, and technical experience.
 
-> **Note**: This entire project, including the design, development, React architecture, and functionalities—was organically created and developed from scratch by **Diwakar Nagar**.
+> **Note**: This entire project, including the design, development, React architecture, and functionalities, was organically created and developed from scratch by **Diwakar Nagar**.
 
 ## License & Usage Restrictions
 
