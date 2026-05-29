@@ -12,6 +12,8 @@ import Achievements from './components/Achievements';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ContactModal from './components/ContactModal';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function App() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
@@ -67,6 +69,8 @@ function App() {
         onClose={() => setIsContactModalOpen(false)} 
         defaultSubject={contactSubject} 
       />
+      <Analytics />
+      <SpeedInsights />
     </>
   );
 }
