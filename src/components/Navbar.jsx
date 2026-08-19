@@ -27,40 +27,7 @@ const Navbar = ({ onOpenContact }) => {
     return () => window.removeEventListener('playMusic', handleGlobalPlay);
   }, []);
 
-  useEffect(() => {
-    const tryPlay = () => {
-      if (audioRef.current && audioRef.current.paused) {
-        audioRef.current.play()
-          .then(() => setIsPlaying(true))
-          .catch(() => setIsPlaying(false));
-      }
-    };
 
-    // Attempt immediately
-    tryPlay();
-
-    // Attempt on first user interaction
-    const handleInteraction = () => {
-      setHasInteracted(true);
-      tryPlay();
-      window.removeEventListener('click', handleInteraction);
-      window.removeEventListener('scroll', handleInteraction);
-      window.removeEventListener('keydown', handleInteraction);
-      window.removeEventListener('touchstart', handleInteraction);
-    };
-    
-    window.addEventListener('click', handleInteraction);
-    window.addEventListener('scroll', handleInteraction, { once: true });
-    window.addEventListener('keydown', handleInteraction);
-    window.addEventListener('touchstart', handleInteraction, { passive: true });
-    
-    return () => {
-      window.removeEventListener('click', handleInteraction);
-      window.removeEventListener('scroll', handleInteraction);
-      window.removeEventListener('keydown', handleInteraction);
-      window.removeEventListener('touchstart', handleInteraction);
-    };
-  }, []);
 
   const togglePlay = (e) => {
     if (e) e.stopPropagation();
