@@ -5,7 +5,7 @@ const experiences = [
   {
     title: 'FullStack Engineer',
     company: 'Fitbox Sports',
-    year: 'NOW',
+    year: '2026',
     desc: 'Built and managed the complete e-commerce website and backend for Fitbox Sports, serving 1M+ customers with a smooth and scalable user experience.',
   },
   {

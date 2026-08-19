@@ -11,6 +11,8 @@ const allProjects = [
   { id: 6, title: 'Admin Dashboard', tag: 'Dashboard', image: '/admin.webp', url: 'https://admin.fitboxsports.in' },
   { id: 7, title: 'BMW Template', tag: 'Web Design', image: '/bmw.webp', url: 'https://bmw-template.vercel.app/' },
   { id: 8, title: 'Weather Web Extension', tag: 'Web Extension', image: '/web.webp', url: 'https://webextension01.vercel.app/' },
+  { id: 9, title: 'CDN-by-DN', tag: 'CDN Simulation', image: '/CDN.webp', url: 'https://cdnbydn.vercel.app/' },
+
 ];
 
 const ProjectCard = ({ project }) => (
