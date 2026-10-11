@@ -27,6 +27,12 @@ const achievements = [
     image: 'achievement3.webp',
     para: 'Achieved 10K+ streams on Spotify for an original track, marking a significant milestone in music production. Collaborated on 25+ projects, including both Indian and international artists, showcasing creativity, consistency, and cross-cultural collaboration.',
   },
+  {
+    id: 5,
+    title: 'Appreciation From SKAT, IAF.',
+    image: 'skat.webp',
+    para: 'I published an article on the Suryakiran Aerobatic Team (SKAT) of the Indian Air Force. Receiving such kind words from the team itself was something I truly didn\'t expect. Their appreciation and encouragement have given me even more motivation to keep researching, writing, and improving Aeroxplore. It\'s moments like these that remind me why I started this journey in the first place.',
+  },
   
 ];
 
