@@ -7,11 +7,13 @@ const allProjects = [
   { id: 2, title: 'ARTIKA.life', tag: 'Web Development', image: '/Artika.webp', url: 'https://github.com/diwakar-web/ARTIKA.life' },
   { id: 3, title: 'VIGYX', tag: 'Web Development', image: '/vigyx.webp', url: 'https://github.com/diwakar-web/VIGYX' },
   { id: 4, title: 'FitBox Sports', tag: 'E-Commerce Website', image: '/fitboxsports.webp', url: 'https://fitboxsports.in' },
-  { id: 5, title: 'Project Watermelon', tag: 'Web Design', image: '/watermelon.webp', url: 'https://https://watermelondn.vercel.app/' },
+  { id: 5, title: 'Project Watermelon', tag: 'Web Design', image: '/watermelon.webp', url: 'https://watermelondn.vercel.app/' },
   { id: 6, title: 'Admin Dashboard', tag: 'Dashboard', image: '/admin.webp', url: 'https://admin.fitboxsports.in' },
   { id: 7, title: 'BMW Template', tag: 'Web Design', image: '/bmw.webp', url: 'https://bmw-template.vercel.app/' },
   { id: 8, title: 'Weather Web Extension', tag: 'Web Extension', image: '/web.webp', url: 'https://webextension01.vercel.app/' },
   { id: 9, title: 'CDN-by-DN', tag: 'CDN Simulation', image: '/CDN.webp', url: 'https://cdnbydn.vercel.app/' },
+  { id: 10, title: 'Snooker', tag: 'Retro Game Simulation', image: '/snooker.webp', url: 'https://snooker-red.vercel.app/' },
+
 
 ];
 
