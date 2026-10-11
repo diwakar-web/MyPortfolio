@@ -13,6 +13,8 @@ const allProjects = [
   { id: 8, title: 'Weather Web Extension', tag: 'Web Extension', image: '/web.webp', url: 'https://webextension01.vercel.app/' },
   { id: 9, title: 'CDN-by-DN', tag: 'CDN Simulation', image: '/CDN.webp', url: 'https://cdnbydn.vercel.app/' },
   { id: 10, title: 'Snooker', tag: 'Retro Game Simulation', image: '/snooker.webp', url: 'https://snooker-red.vercel.app/' },
+  { id: 11, title: 'Shipments Dashboard', tag: 'Dashboard', image: '/shipments.webp', url: 'https://shipments.fitboxsports.in' },
+
 
 
 ];
