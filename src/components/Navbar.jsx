@@ -68,14 +68,14 @@ const Navbar = ({ onOpenContact }) => {
           </a>
           <div className="music-player-wrapper">
             <div className="song-tooltip">
-              <a href="https://www.youtube.com/watch?v=PGR1pPoJSmg" target="_blank" rel="noopener noreferrer">
-                Portofino · Malditho.wav · Tobias Rhein Larsen
+              <a href="https://www.youtube.com/watch?v=6mF8XQRYaHY" target="_blank" rel="noopener noreferrer">
+                Silent Flirt || Prod. By We Are Jazz
               </a>
             </div>
             <button onClick={togglePlay} className={`music-toggle-btn ${!hasInteracted ? 'needs-attention' : ''}`} aria-label="Toggle Music">
               {isPlaying ? <Pause size={20} fill="#ccff00" color="#ccff00" /> : <Play size={20} fill="#ccff00" color="#ccff00" />}
             </button>
-            <audio ref={audioRef} src="/Website.m4a" loop />
+            <audio ref={audioRef} src="/Website.mp3" loop />
           </div>
         </div>
       </div>
