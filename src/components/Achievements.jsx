@@ -11,24 +11,30 @@ const achievements = [
   },
   {
     id: 2,
+    title: 'NPTEL Elite PRIVACY AND SECURITY IN ONLINE SOCIAL MEDIA Course - Top 5%',
+    image: 'achievement5.webp',
+    para: 'Secured 87% (Top 5% of 28,451 candidates) in the 12-week NPTEL Elite PRIVACY AND SECURITY IN ONLINE SOCIAL MEDIA course by IIIT Hyderabad. Covered fundamentals of privacy, data protection, privacy-enhancing technologies, and privacy in online social media.',
+  },
+  {
+    id: 3,
     title: 'AI Impact Summit India 2025',
     image: 'achievement1.webp',
     para: 'Attended the AI Impact Summit India, 2025 in New Delhi, gaining insights into emerging trends in artificial intelligence, real-world applications, and industry innovations through expert talks, workshops, and networking with professionals.',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Inter-University Chess Competition',
     image: 'achievement2.webp',
     para: 'Secured a Gold Medal and Runner-Up position in an inter-university chess competition, demonstrating strategic thinking, problem-solving skills, and competitive excellence against top university players.',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Independent Music Producer',
     image: 'achievement3.webp',
     para: 'Achieved 10K+ streams on Spotify for an original track, marking a significant milestone in music production. Collaborated on 25+ projects, including both Indian and international artists, showcasing creativity, consistency, and cross-cultural collaboration.',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Appreciation From SKAT, IAF.',
     image: 'skat.webp',
     para: 'I published an article on the Suryakiran Aerobatic Team (SKAT) of the Indian Air Force. Receiving such kind words from the team itself was something I truly didn\'t expect. Their appreciation and encouragement have given me even more motivation to keep researching, writing, and improving Aeroxplore. It\'s moments like these that remind me why I started this journey in the first place.',
