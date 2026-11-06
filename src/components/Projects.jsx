@@ -14,6 +14,8 @@ const allProjects = [
   { id: 9, title: 'CDN-by-DN', tag: 'CDN Simulation', image: '/CDN.webp', url: 'https://cdnbydn.vercel.app/' },
   { id: 10, title: 'Snooker', tag: 'Retro Game Simulation', image: '/snooker.webp', url: 'https://snooker-red.vercel.app/' },
   { id: 11, title: 'Shipments Dashboard', tag: 'Dashboard', image: '/shipments.webp', url: 'https://shipments.fitboxsports.in' },
+  { id: 12, title: 'NetRIUM.site', tag: 'E-Learning Platform', image: '/netrium.webp', url: 'https://netrium.site' },
+
 
 
 
