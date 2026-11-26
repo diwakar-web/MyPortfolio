@@ -54,8 +54,10 @@ const About = () => {
           <h2 className="about-title">
             I design and develop<br />with intention..
           </h2>
-          <a href="/Resume.pdf" download="Resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-outline about-btn">
-            My Experience & Resume <ArrowRight size={18} className="arrow-anim" />
+          <a href="/Diwakar-Resume.pdf" download="Diwakar-Resume.pdf" target="_blank" rel="noopener noreferrer" className="about-btn">
+            <span className="about-btn-content">
+              My Experience & Resume <ArrowRight size={18} className="arrow-anim" />
+            </span>
           </a>
         </div>
         
